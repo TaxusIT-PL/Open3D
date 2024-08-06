@@ -38,6 +38,10 @@
 
 #if defined(GLEW_OSMESA)
 #  define GLAPI extern
+#  ifndef APIENTRY
+#    define APIENTRY
+#    define GLEW_APIENTRY_DEFINED
+#  endif
 #  include <GL/osmesa.h>
 #elif defined(GLEW_EGL)
 #  include <GL/eglew.h>
